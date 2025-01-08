@@ -1,0 +1,146 @@
+/* default - vertical */
+.inner {
+    padding: 16px;
+    max-width: 390px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.isVertical .wrap {
+    display: flex;
+    flex-direction: column;
+}
+.isVertical .item {
+    flex-direction: row;
+}
+.item {
+    display: flex;
+    padding: 10px 0;
+    gap:10px;
+}
+.item .img {
+    flex-shrink: 0;
+    border: 1px solid var(--gray-100); 
+    border-radius: 20px;
+     overflow: hidden;
+}
+.isVertical .item .img {
+    width:140px;
+}
+.item .img img {
+    width:100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.txtCont {
+    display: flex;
+    flex-direction: column;
+}
+.txtCont .title {
+    font-weight: 500;
+}
+.txtCont .progressbar {
+    position:relative;
+    width: 100%;
+    height:16px;
+    background-color: var(--orange-300);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 8px 0 12px;
+}
+.txtCont .progressbar .progress {
+    position:absolute;
+    top:0; 
+    left:0;
+    width:0%;
+    height:100%;
+    transition: width 0.6s ease;
+    transition-delay: 0.4s;
+    background-color: var(--orange-500);
+    border-radius: 20px;
+    z-index: 1;
+}
+.txtCont .progressbar .stock {
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-weight: bold;
+    font-size:12px;
+    z-index: 2;
+}
+.txtCont .discount {
+    color: var(--primary-r-500); 
+    font-weight:bold;
+    line-height: 150%;
+}
+.txtCont .origin {
+    color:var(--gray-300);
+    font-size:12px;
+    line-height: 150%;
+}
+
+
+
+/* horizontal */
+.horisontal .wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+.horisontal .wrap::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+.horisontal .wrap ul {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.horisontal.inner .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 0 14px;
+    font-size:18px;
+    line-height:140%;
+}
+.horisontal.inner .title a {
+    color: var(--gray-400);
+    font-size:14px;
+    line-height:140%;
+}
+.horisontal .item {
+    flex-direction: column;
+    width: 120px;
+    flex-shrink: 0;
+}
+.horisontal .item .img {
+    width:120px;
+}
+.txtCont .endTime {
+    align-self: flex-start;
+    padding: 2px 4px;
+    background-color: var(--red-50);
+    border-radius: 4px;
+    line-height: 140%;
+    color: var(--primary-r-500);
+    font-size:12px;
+    font-weight:500;
+    line-height: 150%;
+}
+
+.horisontal dl {
+    margin: 2px 0;
+    font-weight: 500;
+    line-height: 140%;
+}
+.horisontal dl dt {
+    margin-bottom:2px;
+}
+.horisontal .discount {
+    font-weight:bold;
+    color:var(--primary-r-500);
+}
+.horisontal .price {
+    font-weight:bold;
+}

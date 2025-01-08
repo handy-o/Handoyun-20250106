@@ -1,0 +1,52 @@
+.inner {
+    padding: 16px;
+    background-color: var(--orange-500);
+    overflow: hidden;
+    max-width: 390px;
+    margin:0 auto;
+}
+.wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+.wrap::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+.title {
+    color: white;
+    font-weight: 700;
+    font-size:20px;
+    line-height: 26px;
+    margin-bottom:10px;
+}
+.lists {
+    padding:10px 0 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+.lists li {
+    flex-shrink: 0;
+    width:146px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+} 
+.lists li img {
+    width:100%;
+}
+.lists li dl {
+    padding:10px;
+    font-weight: 500;
+    line-height:140%;
+}
+
+.discount {
+    font-weight:bold;
+    color:var(--primary-r-500);
+}
+.price {
+    font-weight:bold;
+}
