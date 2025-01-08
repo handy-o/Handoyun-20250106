@@ -104,8 +104,7 @@ const TimeDealComp = () => {
 
     const getCurrentTimeSlot = () => {
     const now = new Date();
-    // const currentHour = now.getHours();
-    const currentHour = 14;
+    const currentHour = now.getHours();
     const matchingTabs: string[] = []; 
 
     // 탭 구간
@@ -147,7 +146,7 @@ const TimeDealComp = () => {
                     <div className={styles.txtCont}>
                         
                         <dl>
-                            <dt className="ellipsis">
+                            <dt className={`${styles.title} ellipsis`}>
                                 {item.title}
                             </dt>
                             <dd>
@@ -161,7 +160,7 @@ const TimeDealComp = () => {
             ))}
             </ul>
 
-            <div ref={observerRef}>{hasNextPage ? "Load more" : "Done"}</div>
+            <div ref={observerRef}>{hasNextPage ? "Load more" : ""}</div>
         </div>
         
     )

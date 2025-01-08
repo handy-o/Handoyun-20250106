@@ -4,14 +4,14 @@
     overflow: hidden;
 }
 
-.inner .title {
+.inner > .title {
     display: flex;
     align-items: center;
     padding:18px 0 14px;
     font-size:18px;
 
 }
-.inner ul.title {
+.inner > ul.title {
     font-weight: bold;
     font-size:18px;
     border-bottom: 1px solid #EEEFF3;
@@ -86,6 +86,7 @@
 }
 .txtCont .title {
     font-weight: 500;
+    line-height:140%;
 }
 .txtCont .origin {
     display: block;
@@ -94,6 +95,7 @@
     /* gr-300 */
     font-size:16px;
     text-decoration: line-through;
+    margin-bottom:4px;
 }
 .txtCont .discount {
     color: #F8323E; 

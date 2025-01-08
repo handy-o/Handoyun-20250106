@@ -62,7 +62,7 @@
 .txtCont .progressbar .stock {
     position: absolute;
     top:50%; left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -51%);
     color:white;
     font-weight: bold;
     font-size:12px;
@@ -127,6 +127,7 @@
     font-size:12px;
     font-weight:500;
     line-height: 150%;
+    margin: 6px 0 2px; 
 }
 
 .horisontal dl {

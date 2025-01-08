@@ -31,9 +31,8 @@ const BrandDealComp = ({isVertical, cachePage} :brandDealCompProps ) => {
     const {data, isLoading, isError} = useBrandDeal(page);
 
     const fetchItem = () => {
-        // 데이터가 없거나 로딩 중이거나 첫번째 로드 중엔 요청 x
         if (!data || isLoading || pageParams.includes(page)) return;
-         
+
         setItems((prevItems) => [...prevItems, ...data.itemList]);
         setPageParams((prev) => [...prev, page]);
         if (data.isLastPage) {
@@ -46,7 +45,7 @@ const BrandDealComp = ({isVertical, cachePage} :brandDealCompProps ) => {
     useEffect(() => {
         if (items.length > 0) {
             const newWidths = items.reduce((acc, item) => {
-                acc[item.id] = item.stockPercentage; // 최종 width 값 설정
+                acc[item.id] = item.stockPercentage;
                 return acc;
             }, {} as { [key: number]: number });
             // progress 시각효과
@@ -114,7 +113,7 @@ const BrandDealComp = ({isVertical, cachePage} :brandDealCompProps ) => {
                     </div>
                 ))}
             </div>
-            <div ref={observerRef}>{hasNextPage ? "Load more" : "Done"}</div>
+            <div ref={observerRef}>{hasNextPage ? "Load more" : ""}</div>
         </div>
         ) : (
             <div className={`${styles.inner} ${styles.horisontal}`}>
